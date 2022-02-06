@@ -20,17 +20,17 @@ public class UserService {
 
     public User getUserInfo(String username) throws ExecutionException, InterruptedException {
 
-            Firestore dbFirestore = FirestoreClient.getFirestore();
-            DocumentReference documentReference = dbFirestore.collection("users").document("353gPpikw7bDHaHu0hh1");
-            ApiFuture<DocumentSnapshot> future = documentReference.get();
-            DocumentSnapshot document = future.get();
-            User user = null;
-            if(document.exists()) {
-                user= document.toObject(User.class);
-                return user;
-            }else {
-                return null;
-            }
+        Firestore dbFirestore = FirestoreClient.getFirestore();
+        DocumentReference documentReference = dbFirestore.collection("users").document(username);
+        ApiFuture<DocumentSnapshot> future = documentReference.get();
+        DocumentSnapshot document = future.get();
+        User user = null;
+        if(document.exists()) {
+            user= document.toObject(User.class);
+            return user;
+        }else {
+            return null;
+        }
 
 }
     public String saveUserDetails(User user) throws InterruptedException, ExecutionException {

@@ -30,7 +30,8 @@ public class UserController {
     }
 
     @PutMapping
-    public String updateUser(@RequestBody User user) throws ExecutionException, InterruptedException {
+    public String updatePoints(@RequestBody User user) throws ExecutionException, InterruptedException {
         return userService.updateUserDetails(user);
     }
+
 }

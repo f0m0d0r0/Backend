@@ -10,7 +10,15 @@ public class User {
 
     private int points;
 
+    private int locationOwnershipId;
 
+    public User(){}
+
+//public User(String username, String password, int points){
+//    this.username = username;
+//    this.password = password;
+//    this.points = points;
+//}
     public User(String username, String password) {
         this.username = username;
         this.password = password;
@@ -31,6 +39,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getLocationOwnershipId() {
+        return locationOwnershipId;
+    }
+
+    public void setLocationOwnershipId(int locationOwnershipId) {
+        this.locationOwnershipId = locationOwnershipId;
     }
 
     public int getPoints() {
