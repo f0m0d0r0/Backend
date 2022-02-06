@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="566cc7e0-36ad-4c8f-9107-0de0063c5fa2" name="Changes" comment="added cloud firebase support">
+      <change afterPath="$PROJECT_DIR$/services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FomodoroBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FomodoroBackend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_bson_4_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_core_4_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongodb_driver_sync_4_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_mongodb_2_6_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_3_3_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fomodorobackend/User/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fomodorobackend/User/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +70,39 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.FomodoroBackendApplication">
     <configuration name="scratch | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="scratch | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="3" requestIdentifier="#3" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="scratch | ##" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="2" requestIdentifier="##" runType="Run single request">
       <method v="2" />
+    </configuration>
+    <configuration name="scratch | ###2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="4" requestIdentifier="###2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | ###3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="5" requestIdentifier="###3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="FomodoroBackend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="FomodoroBackend" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="FomodoroBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="FomodoroBackend" />
@@ -74,6 +113,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.scratch | ###3" />
+        <item itemvalue="HTTP Request.scratch | ###2" />
+        <item itemvalue="HTTP Request.scratch | #3" />
         <item itemvalue="HTTP Request.scratch | ##" />
         <item itemvalue="HTTP Request.scratch | #1" />
       </list>

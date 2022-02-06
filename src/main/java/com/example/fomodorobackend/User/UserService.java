@@ -39,15 +39,44 @@ public class UserService {
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String updateUserDetails(User user) throws InterruptedException, ExecutionException {
+    public String updateUserPoints(String username, int points) throws InterruptedException, ExecutionException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("users").document(user.getUsername()).set(user);
+        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("users").document(username).update("points", points);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
-    public String deleteUser(String name) {
+
+    //deprecated stuff
+//    public String deleteUser(String name) {
+//        Firestore dbFirestore = FirestoreClient.getFirestore();
+//        ApiFuture<WriteResult> writeResult = dbFirestore.collection("users").document(name).delete();
+//        return "Document with User ID "+name+" has been deleted";
+//    }
+
+    public String addUserOwnedLocations(String username, String locationName) throws ExecutionException, InterruptedException {
+
+        User tempUser = getUserInfo(username);
+
+        tempUser.addOwnedLocations(locationName);
+
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> writeResult = dbFirestore.collection("users").document(name).delete();
-        return "Document with User ID "+name+" has been deleted";
+        ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("users").document(username).set(tempUser);
+        return collectionsApiFuture.get().getUpdateTime().toString();
     }
+
+    public String deleteUserOwnedLocation(String username, String locationName) throws ExecutionException, InterruptedException {
+        User tempUser = getUserInfo(username);
+
+        if (tempUser.deleteOwnedLocation(locationName)) {
+            Firestore dbFirestore = FirestoreClient.getFirestore();
+            ApiFuture<WriteResult> collectionsApiFuture = dbFirestore.collection("users").document(username).set(tempUser);
+            return collectionsApiFuture.get().getUpdateTime().toString();
+        }
+        else {
+            return "Location not owned by user. Returned";
+        }
+    }
+
+
+
 
 }

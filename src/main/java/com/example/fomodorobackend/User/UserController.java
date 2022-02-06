@@ -29,9 +29,19 @@ public class UserController {
         return userService.saveUserDetails(user);
     }
 
-    @PutMapping
-    public String updatePoints(@RequestBody User user) throws ExecutionException, InterruptedException {
-        return userService.updateUserDetails(user);
+    @PutMapping("/points")
+    public String updatePoints(@RequestParam("username") String username, @RequestParam("points") int points) throws ExecutionException, InterruptedException {
+        return userService.updateUserPoints(username, points);
+    }
+
+    @PutMapping("/location")
+    public String updateOwnedLocations(@RequestParam("username") String username, @RequestParam("location") String location) throws ExecutionException, InterruptedException {
+        return userService.addUserOwnedLocations(username, location);
+    }
+
+    @DeleteMapping
+    public String deleteLocation(@RequestParam("username") String username, @RequestParam("location") String deleteLoc) throws ExecutionException, InterruptedException {
+        return userService.deleteUserOwnedLocation(username, deleteLoc);
     }
 
 }
