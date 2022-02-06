@@ -25,7 +25,9 @@ public class UserController {
     }
 
     @PostMapping
-    public void registerUser(@RequestParam String username, @RequestParam String password) {}
+    public String registerUser(@RequestBody User user) throws ExecutionException, InterruptedException {
+        return userService.saveUserDetails(user);
+    }
 
     @PutMapping
     public String updateUser(@RequestBody User user) throws ExecutionException, InterruptedException {

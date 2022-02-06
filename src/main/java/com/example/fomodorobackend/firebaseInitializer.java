@@ -8,20 +8,21 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.io.FileInputStream;
 
+@Service
 public class firebaseInitializer {
-    @Service
-    public class FBInitialize {
         @PostConstruct
         public void initialize() {
             try {
                 FileInputStream serviceAccount =
                         new FileInputStream("./services.json");
+
                 FirebaseOptions options = new FirebaseOptions.Builder()
                         .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                        .setDatabaseUrl("https://fomodoromvp.firebaseio.com")
+                        .setDatabaseUrl("https://fomodoromvp-default-rtdb.firebaseio.com")
                         .build();
+
                 FirebaseApp.initializeApp(options);
             } catch (Exception e) {
                 e.printStackTrace();
-            }}}
+            }}
 }
